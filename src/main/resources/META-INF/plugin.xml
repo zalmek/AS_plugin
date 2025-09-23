@@ -1,0 +1,19 @@
+<idea-plugin>
+    <id>com.example.codelabapp.settings-viewer</id>
+    <name>Codelab Settings Viewer</name>
+    <vendor email="dev@example.com">Codelab</vendor>
+    <description>Shows a settings field value in a dedicated tool window.</description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable
+            id="com.example.codelabapp.settings"
+            displayName="Codelab Settings"
+            instance="com.example.codelabapp.settings.SettingsConfigurable" />
+        <toolWindow
+            id="Codelab Value"
+            anchor="right"
+            factoryClass="com.example.codelabapp.toolwindow.ValueToolWindowFactory" />
+    </extensions>
+</idea-plugin>
